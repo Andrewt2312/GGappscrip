@@ -1,4 +1,5 @@
 function createDraftEmail() {
+//Sample sheet https://docs.google.com/spreadsheets/d/19SDzLwaebQ5RmgW1yehWRvX-dKiN6vHZYY3c9LEQeEs/edit?usp=sharing
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   //Create a sheet call mailing list
   //Email in range D2:D getRange(2+i,4)
@@ -17,8 +18,7 @@ function createDraftEmail() {
   htmlBody: htmlBody,
  
 }
-  
-
+//Loop to create draft email
    for (i=0; i < countEmail; i++)
 	  {
         var recipient = sheet.getRange(2+i, 4).getValue();
